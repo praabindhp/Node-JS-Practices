@@ -3,7 +3,7 @@
 function fetchData() {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        const data = "Hello, world!";
+        const data = "Hello, World!";
         resolve(data); // Resolves the promise with data
       }, 1000);
     });
