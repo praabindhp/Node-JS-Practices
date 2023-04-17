@@ -1,3 +1,5 @@
+// Callbacks are functions that are passed as arguments to other functions and are executed at a later time, usually after an asynchronous task completes.
+
 // console.log('fired first');
 // console.log('fired second');
 
@@ -23,3 +25,5 @@ function handleData(error, data) {
 }
 
 fetchData(handleData); // Call fetchData with handleData as the callback function
+
+// fetchData simulates an asynchronous task that fetches data after a delay of 1 second. The handleData function is passed as a callback to fetchData, and it gets executed with the fetched data when it's available.

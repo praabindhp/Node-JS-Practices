@@ -1,3 +1,5 @@
+// Promises are objects that represent the eventual completion or failure of an asynchronous operation and allow chaining of multiple asynchronous tasks.
+
 // const fs = require('fs');
 
 // const data = fs.readFile('hello.txt', 'utf-8', function(err, res) {
@@ -24,4 +26,5 @@ function fetchData() {
     .catch(function(error) {
       console.error(error);
     });
-  
+
+// fetchData returns a Promise that resolves with the fetched data. The then method is used to handle the resolved value, and the catch method is used to handle any errors that may occur during the asynchronous operation.
