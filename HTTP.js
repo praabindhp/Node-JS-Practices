@@ -5,11 +5,12 @@ const server = http.createServer((req, res) => {
     if(req.url === '/'){
         res.end('Welcome To Our Home Page');
     }
-    if(req.url === '/about'){
+    else if(req.url === '/about'){
         res.end('Welcome To Our About Page');
+    } else {
+        res.end(`${req.url} - This Page Is Not Available`);
     }
-    // request.write('Hello World, Welcome To Home Page');
-    res.end(``);
 });
 
 server.listen(5000);
+console.log('Server Is Listening On Port 5000');
