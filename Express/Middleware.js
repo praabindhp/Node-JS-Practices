@@ -2,12 +2,15 @@ const express = require("express");
 const app = express();
 const logger = require("./Logger");
 const authorize = require("./Authorize");
+const morgan = require("morgan");
 
 // Req => Middleware => Res
-app.use([logger, authorize]);
+// app.use([logger, authorize]);
+
+app.use(morgan('tiny'));
 
 PORT = 5000;
-app.get('/', [logger, authorize], function (req, res) {
+app.get('/', function (req, res) {
     res.send('Home Page');
 });
 
